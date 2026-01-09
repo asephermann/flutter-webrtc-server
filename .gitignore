@@ -8,6 +8,16 @@
 # Test binary, built with `go test -c`
 *.test
 
+# Idea project files
+.idea/
+
+# AI-Agent
+.claude/
+
+# Node modules
+node_modules/
+
+
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 

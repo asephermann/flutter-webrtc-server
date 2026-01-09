@@ -15,12 +15,32 @@ Online Demo: https://demo.cloudwebrtc.com:8086/
 
 ### Run from source
 
-- Clone the repository.  
+- Clone the repository.
 
 ```bash
 git clone https://github.com/flutter-webrtc/flutter-webrtc-server.git
 cd flutter-webrtc-server
 ```
+
+#### Windows
+
+- Install [Chocolatey](https://chocolatey.org/install) first (if not already installed).
+
+- Use `mkcert` to create a self-signed certificate.
+
+```powershell
+choco install mkcert
+mkcert -key-file configs/certs/key.pem -cert-file configs/certs/cert.pem localhost 127.0.0.1 ::1 0.0.0.0
+```
+
+- Install Go and run the server.
+
+```powershell
+choco install golang
+go run cmd/server/main.go
+```
+
+#### Linux/macOS
 
 - Use `mkcert` to create a self-signed certificate.
 
